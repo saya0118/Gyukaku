@@ -1,11 +1,8 @@
-import React from 'react';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-const HelloWorld = () => {
-    return (
-        <div>
-            HelloWorld
-        </div>
-    )
-}
-
-export default HelloWorld;
+ReactDOM.render (
+    <App/>,
+    document.getElementById('root')
+);

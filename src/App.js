@@ -1,10 +1,10 @@
-import HelloWorld from './index'
+import Main from './crud/Main'
 import React from 'react'
-import {render} from 'react-dom'
 
-const CRUD = () => {
-    ReactDOM.render (
-        <HelloWorld/>,
-        document.getElementById('root')
+const App = () => {
+    return (
+        <Main/>
     )
 }
+
+export default App;
