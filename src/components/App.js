@@ -1,7 +1,9 @@
 import React from 'react'
 import Input from './AddTodo'
+import {connect} from 'react-redux'
 
 const App = (props) => {
+    // console.log(props);
     return (
         <div>
             <h1>Todo List</h1>
@@ -20,28 +22,8 @@ const App = (props) => {
     )
 }
 
-export default App;
-
-// const Main = () => {
-//     //まずはStateで変化するデータを管理
-//     const [word, setWord] = useState("");
-//     const [list, setList] = useState([]);
-//     const [ isEditing, setIsEditing ] = useState(false);
-
-    
-//     //インプットタグの中身が変わるごとにsetWordに入れられる。
-//     const onChange = (event) => {
-//         setWord(event.target.value);
-//     }
-
-//     //Addボタンを押された時に、新しいwordとすでにあるリストをバラして一つのarrayにする。ついでにインプットタグを空っぽにする。
-//     const onHandleAdd = () => {
-//         setList([...list, word])
-//         setWord("")
-//     }
-
-//     const onHandleDelete = (index) => {
-//         const newList = [...list]
-//         newList.splice(index, 1)
-//         setList(newList)
-//     }
+const mapStateToProps = state => {
+    // console.log(state);
+    return {list: state.lists}
+}
+export default connect(mapStateToProps)(App)

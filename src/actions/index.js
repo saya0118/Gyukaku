@@ -1,7 +1,7 @@
 export const LIST_ADDED = 'LIST_ADDED'
-export const Add = () => {
+export const Add = (word) => {
     return {
         type: 'LIST_ADDED',
-        payload: []
+        payload: word
     }
 }
