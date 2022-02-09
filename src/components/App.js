@@ -1,6 +1,7 @@
 import React from 'react'
 import Input from './AddTodo'
 import DeleteButton from './DeleteTodo'
+import EditButton from './EditTodo'
 import {connect} from 'react-redux'
 
 const App = (props) => {
@@ -13,7 +14,7 @@ const App = (props) => {
                 {props.list.map((item, i) =>
                 <li key={i}>
                     {item}
-                    <button>Edit</button>
+                    <EditButton index={i}/>
                     <DeleteButton index={i}/>
                 </li>
                 )}

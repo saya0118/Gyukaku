@@ -14,10 +14,10 @@ export const Delete = (index) => {
     }
 }
 
-// export const LIST_EDITED = 'LIST_EDITED'
-// export const Edit = (index) => {
-//     return {
-//         type: 'LIST_EDITED',
-//         payload: index
-//     }
-// }
+export const LIST_EDITED = 'LIST_EDITED'
+export const Edit = (word) => {
+    return {
+        type: 'LIST_EDITED',
+        payload: word
+    }
+}
