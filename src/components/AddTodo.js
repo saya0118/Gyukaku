@@ -10,7 +10,7 @@ const AddTodo = (props) => {
         setWord(e.target.value)
     }
 
-    console.log(props);
+    // console.log(props);
 
     return(
         <div>

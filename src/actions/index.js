@@ -5,3 +5,19 @@ export const Add = (word) => {
         payload: word
     }
 }
+
+export const LIST_DELETED = 'LIST_DELETED'
+export const Delete = (index) => {
+    return {
+        type: 'LIST_DELETED',
+        payload: index
+    }
+}
+
+// export const LIST_EDITED = 'LIST_EDITED'
+// export const Edit = (index) => {
+//     return {
+//         type: 'LIST_EDITED',
+//         payload: index
+//     }
+// }
