@@ -15,9 +15,12 @@ export const Delete = (index) => {
 }
 
 export const LIST_EDITED = 'LIST_EDITED'
-export const Edit = (word) => {
+export const Edit = (editText, index) => {
     return {
         type: 'LIST_EDITED',
-        payload: word
+        payload: {
+            value: editText,
+            index: index
+        }
     }
 }

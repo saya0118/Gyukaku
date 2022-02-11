@@ -2,7 +2,9 @@ const listReducer = (state=[], action) => {
     console.log(state)
     switch (action.type) {
         case 'LIST_ADDED':
-            return [...state, action.payload]
+            return (
+                [...state, action.payload]
+            )
 
         case 'LIST_DELETED':
             // console.log(action.payload)
@@ -11,7 +13,10 @@ const listReducer = (state=[], action) => {
             return [...state]
 
         case 'LIST_EDITED':
-            return [...state, action.payload]
+            // const { value, index } = action.payload;
+            const copiedState = [...state];
+            copiedState[action.payload.index] = action.payload.value;        
+            return copiedState
         
         default:
             return state
